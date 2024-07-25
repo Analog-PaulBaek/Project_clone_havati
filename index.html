@@ -13,15 +13,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 </head>
 
 <body>
     <!-- 팝업창 -->
     <div class="popup-wrap">
-        <div class="popup-slider">
-            <img src="https://placehold.co/400x400">
-        </div>
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="0"
+            centered-slides="true" autoplay-delay="3000" autoplay-disable-on-interaction="false">
+            <swiper-slide><img src="https://via.placeholder.com/500X500" alt=""></swiper-slide>
+            <swiper-slide><img src="https://via.placeholder.com/500X500" alt=""></swiper-slide>
+        </swiper-container>
         <div class="popup-btns">
             <button id="todayBtn">오늘 하루 열지 않기</button>
             <button id="closeBtn">닫기</button>
