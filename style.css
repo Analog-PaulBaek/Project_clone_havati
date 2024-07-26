@@ -1,4 +1,5 @@
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Nanum Gothic', sans-serif;
@@ -89,10 +90,12 @@ body {
 
 /* 우측 상단 메뉴&메인로고 시작 */
 .header-fix {
+  /* test */
+  border: 3px solid black;
   position: fixed;
   width: 100%;
   z-index: 997;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
 }
 .header-wrap {
   height: 190px;
@@ -164,6 +167,8 @@ body {
 
 /* 메인 메뉴 바시작 */
 .main-menu {
+  /* test */
+  border: 3px solid black;
   height: 39.4px;
   display: flex;
   align-items: center;
@@ -296,21 +301,25 @@ body {
 
 /* 메인컨텐츠 부분 시작 */
 .item-list {
-  height: 1000px;
+  height: 3000px;
+  /* background-color: beige; */
   width: 100%;
-  background-color: orange;
   position: relative;
+  top: 230px;
+  /* test */
+  border: 3px solid black;
 }
 
 /* 하단 부분 시작 */
 
 .footer_wrap {
+  /* test */
+  border: 3px solid black;
   padding: 0 auto;
   margin: 0 auto;
   height: 450.09px;
   width: 100%;
-  position: relative;
-  background-color: white;
+  /* background-color: white; */
 }
 .footer_holder {
   padding: 80px 0px 10px;
