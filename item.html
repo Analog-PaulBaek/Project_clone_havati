@@ -18,7 +18,7 @@
 
 <body>
     <!-- 상단 스크롤 버튼 -->
-     <div><a href="#" class="btn_top"><i class="fa-solid fa-angles-up"></i></a></div>
+    <div><a href="#" class="btn_top"><i class="fa-solid fa-angles-up"></i></a></div>
     <!-- 사이드 메뉴 부분 시작 -->
     <div id="sidemenu_show"></div>
     <div class="side-menu-wrap" id="side_menu">
@@ -121,9 +121,63 @@
 
     <!-- 상세페이지 시작 -->
     <div class="container">
-        <div class="item_wrap"></div>
-
-
+        <div class="empty_space"></div>
+        <div class="wrap">
+            <div class="item_wrap">
+                <div class="item_img">
+                    <div class="big_img"><img src="https://havatishop.com/web/product/big/202403/98c89043e0b0e09f03d59c576dfa4543.jpg" alt=""></div>
+                    <div class="another_img">
+                        <ul>
+                            <li class="img1" onclick="change(event)"><img src="https://havatishop.com/web/product/big/202403/98c89043e0b0e09f03d59c576dfa4543.jpg" alt=""></li>
+                            <li class="img2" onclick="change(event)"><img src="https://havatishop.com/web/upload/NNEditor/20240308/SHIRRING20PULLOVER20HALF20SHIRT_BLACK_1.jpg" alt=""></li>
+                            <li class="img3" onclick="change(event)"><img src="https://havatishop.com/web/upload/NNEditor/20240308/SHIRRING20PULLOVER20HALF20SHIRT_BLACK_2.jpg" alt=""></li>
+                            <li class="img4" onclick="change(event)"><img src="https://havatishop.com/web/upload/NNEditor/20240308/SHIRRING20PULLOVER20HALF20SHIRT_BLACK_3.jpg" alt=""></li>
+                            <li class="img5" onclick="change(event)"><img src="https://havatishop.com/web/upload/NNEditor/20240308/SHIRRING20PULLOVER20HALF20SHIRT_BLACK_4.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <form name="frm" method="post">
+                    <table name="parent" id="parent">
+                        <tr>
+                            <td id="itemname" name="itemname" colspan="3">[SHIRTER] SHIRRING PULLOVER HALF SHIRT (BLACK)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><span  id="itemprice">148000</span>원</td>
+                        </tr>
+                        <tr>
+                            <td>SIZE</td>
+                            <td colspan="2">
+                                <select id="selectbox" onchange="addList()">
+                                <option value="">-[필수] 옵션을 선택해주세요.-</option>
+                                <option disabled>-----------</option>
+                                <option disabled>size</option>
+                                <option value="">S</option>
+                                <!-- <option value="">M</option>
+                                <option value="">L</option> -->
+                            </select>
+                        </td>
+                        <tr>
+                        </tr>
+                        </tr>
+                        <tr id="insert_obj">
+                            <td><strong>TOTAL PRICE</strong></td>
+                            <td colspan="2"><strong><span id="sum">0</span>원</strong></td>
+                        </tr>
+                        <tr>
+                            <td id="btns" colspan="3"><button >BUY</button></td>
+                        </tr>
+                        <tr>
+                            <td id="btns" colspan="3"><button>ADD to cart</button></td>
+                        </tr>
+                        <tr>
+                            <td id="btns" colspan="3"><button >Wish List</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
     </div>
 
 

@@ -4,9 +4,9 @@ const searchInput = document.querySelector("#search_input");
 const searchBtn = document.querySelector("#search_btn");
 
 
-searchBtn.addEventListener("click", function(){
-    searchInput.classList.toggle("active");
-    searchInput.focus();
+searchBtn.addEventListener("click", function () {
+  searchInput.classList.toggle("active");
+  searchInput.focus();
 })
 
 // 사이드메뉴 
@@ -15,14 +15,14 @@ const sideMenuBtn = document.querySelector("#sidemenu_btn");
 const sideMenu = document.querySelector("#side_menu")
 const sideMenuShow = document.getElementById("sidemenu_show")
 
-sideMenuBtn.addEventListener("click", function(){
-    sideMenu.classList.add('show');
-    sideMenuShow.classList.add('back');
+sideMenuBtn.addEventListener("click", function () {
+  sideMenu.classList.add('show');
+  sideMenuShow.classList.add('back');
 })
 
-sideMenuShow.addEventListener('click', function(){
-    sideMenu.classList.remove('show');
-    sideMenuShow.classList.remove('back');
+sideMenuShow.addEventListener('click', function () {
+  sideMenu.classList.remove('show');
+  sideMenuShow.classList.remove('back');
 })
 
 
@@ -52,11 +52,11 @@ const btnTop = document.querySelector(".btn_top");
 
 
 document.addEventListener('scroll', () => {
-	if (window.scrollY > 20){
-		showBtn();
-	} else{
-		hideBtn();
-	}
+  if (window.scrollY > 20) {
+    showBtn();
+  } else {
+    hideBtn();
+  }
 });
 
 function showBtn() {
@@ -67,9 +67,110 @@ function hideBtn() {
   btnTop.classList.remove("showbtntop");
 }
 
-btnTop.click(function(){
-	$('html, body').animate({scrollTop:0},400);
-	return false;
+btnTop.click(function () {
+  $('html, body').animate({ scrollTop: 0 }, 400);
+  return false;
 });
+
+
+function change(e) {
+  let bigImg = document.querySelector('.big_img > img');
+  let clickImg = e.target;
+  console.log(bigImg.src);
+  console.log(clickImg.src);
+
+  bigImg.src = clickImg.src;
+}
+
+function addList() {
+  let frm = document.frm;
+  let parent = document.getElementById('parent');
+  let price = document.getElementById("itemprice");
+  let size = frm.selectbox.options[selectbox.selectedIndex].text; // 선택한 사이즈
+  // console.log(size);
+  let itemName = document.getElementById('itemname').innerHTML; // 상품 이름.
+  // console.log(itemName);
+
+
+  let tr = document.createElement("tr"); // 부모
+
+  let td1 = document.createElement('td'); // 1. td 요소 생성
+  td1.innerHTML = "<strong>" + itemName + "</strong> - " + size;
+  // 상품 이름 끝
+
+  let td2 = document.createElement('td'); // td 생성
+
+  let divAmount = document.createElement('div'); // div 생성
+  divAmount.id = "amount";
+
+  let input = document.createElement('input');
+  input.setAttribute("type", "text");
+  input.setAttribute("value", "1");
+
+  let amountBtn = document.createElement('div');
+  amountBtn.id = "amount-btn";
+
+  let amountUp = document.createElement('img');
+  amountUp.setAttribute("src", "https://img.echosting.cafe24.com/design/skin/default/product/btn_count_up.gif");
+
+  let br = document.createElement('br');
+
+  let amountDown = document.createElement('img');
+  amountDown.setAttribute("src", "https://img.echosting.cafe24.com/design/skin/default/product/btn_count_down.gif");
+
+  amountBtn.append(amountUp, br, amountDown);
+
+  let deleteBtn = document.createElement('img');
+  deleteBtn.id = "delete-btn";
+  deleteBtn.setAttribute("src", "https://img.echosting.cafe24.com/design/skin/default/product/btn_price_delete.gif");
+
+
+  divAmount.append(input, amountBtn, deleteBtn);
+
+
+  td2.append(divAmount)
+
+
+  let td3 = document.createElement('td');
+  td3.id = "td3"
+  td3.innerHTML = price.innerHTML + "원";
+
+  tr.append(td1, td2, td3);
+
+  let insertObj = document.getElementById("insert_obj");
+  insertObj.parentNode.insertBefore(tr, insertObj);
+
+  amountUp.addEventListener("click", () => {
+
+    input.value = parseInt(input.value) + 1
+    td3.innerHTML = parseInt(td3.innerHTML);
+    td3.innerHTML = price.innerHTML * input.value + "원";
+    sum.innerHTML = input.value * price.innerHTML;
+
+  });
+
+  amountDown.addEventListener("click", () => {
+    input.value = parseInt(input.value) - 1;
+    td3.innerHTML = parseInt(td3.innerHTML);
+    td3.innerHTML = price.innerHTML * input.value + "원";
+    sum.innerHTML = input.value * price.innerHTML;
+  });
+
+  let sum = document.getElementById("sum");
+  sum.innerHTML = input.value * price.innerHTML;
+
+  let remove = () => {
+    tr.remove();
+  }
+  deleteBtn.addEventListener("click",remove);
+}
+
+
+  
+
+
+
+
+
 
 
