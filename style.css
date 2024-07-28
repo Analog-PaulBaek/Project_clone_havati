@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+body * {
   font-family: 'Roboto', 'Nanum Gothic', sans-serif;
   font-weight: 400;
 }
@@ -552,4 +555,56 @@ body {
 
 .copyright {
   margin: 10px 0px 30px;
+}
+
+/* 팝업창 시작 */
+.popup-wrap {
+  border: 1px rgb(213, 213, 213) solid;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+swiper-container {
+  width: 500px;
+  height: 500px;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popup-btns {
+  display: flex;
+}
+.popup-btns button {
+  border: none;
+  background-color: white;
+  width: 250px;
+  height: 60px;
+  cursor: pointer;
+}
+.popup-btns button:hover {
+  background-color: rgb(219, 219, 219);
+}
+#notTodayBtn {
+  border-right: 1px rgb(213, 213, 213) solid;
+  border-top: 1px rgb(213, 213, 213) solid;
+}
+#closeBtn {
+  border-top: 1px rgb(213, 213, 213) solid;
 }

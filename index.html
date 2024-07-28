@@ -13,10 +13,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- 스와이퍼 슬라이더 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 </head>
 
 <body>
+    <!-- 팝업창 -->
+    <div class="popup-wrap">
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="0"
+            centered-slides="true" autoplay-delay="3000" autoplay-disable-on-interaction="false">
+            <swiper-slide><img src="https://via.placeholder.com/500X500" alt=""></swiper-slide>
+            <swiper-slide><img src="https://via.placeholder.com/500X500" alt=""></swiper-slide>
+        </swiper-container>
+        <div class="popup-btns">
+            <button id="notTodayBtn">오늘 하루 열지 않기</button>
+            <button id="closeBtn">닫기</button>
+        </div>
+    </div>
+
     <!-- 상단 스크롤 버튼 -->
      <div><a href="#" class="btn_top"><i class="fa-solid fa-angles-up"></i></a></div>
     <!-- 사이드 메뉴 부분 시작 -->
@@ -195,6 +210,7 @@
 
     <!-- 자바스크립트 -->
     <script src="app.js"></script>
+    <script src="popup.js"></script>
 </body>
 
 </html>
