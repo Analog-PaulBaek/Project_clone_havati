@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>하바티 메인</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="cart.css">
     <!--폰트어썸 CDN : -->
     <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
 
@@ -18,7 +18,7 @@
 
 <body>
     <!-- 상단 스크롤 버튼 -->
-     <div><a href="#" class="btn_top"><i class="fa-solid fa-angles-up"></i></a></div>
+    <div><a href="#" class="btn_top"><i class="fa-solid fa-angles-up"></i></a></div>
     <!-- 사이드 메뉴 부분 시작 -->
     <div id="sidemenu_show"></div>
     <div class="side-menu-wrap" id="side_menu">
@@ -39,7 +39,7 @@
             </ul>
             <ul><a href="#">ACCOUNT</a>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="signUp.html">Join us</a></li>
+                <li><a href="joinus.html">Join us</a></li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="#">Myshop</a></li>
                 <li><a href="#">Wishlist</a></li>
@@ -97,7 +97,7 @@
                 <li class="main-menu-parent"><a href="#">ACCOUNT</a>
                     <ul class="main-menu-child" id="account-menu">
                         <li><a href="login.html">LOGIN</a></li>
-                        <li><a href="signUp.html">JOIN US</a></li>
+                        <li><a href="joinus.html">JOIN US</a></li>
                         <li><a href="cart.html">CART</a></li>
                         <li><a href="#">MYSHOP</a></li>
                         <li><a href="#">WISH LIST</a></li>
@@ -119,68 +119,60 @@
 
 
 
-    <!-- 아이템 슬라이드 부분 시작 -->
-    <div class="item-list">
-        <form name="frm" method="post">
-        <div class="titleArea">
-            <h2>로그인</h2>
-        </div>
-
-        <div class="login_wrap">
-            <div class="login">
-                <h3>Member Login</h3>
-
-                <p class="check">
-                    <span>User ID</span>
-                    <input type="text" name="member_id">
-                </p>
-                <p class="check">
-                    <span>Password</span>
-                    <input type="password" name="member_passwd">
-                </p>
-
-                <p class="security">
-                    <input type="checkbox" id="member_check_save_id">
-                    <label>아이디 저장</label>
-                    <img src="https://img.echosting.cafe24.com/design/skin/default/member/ico_access.gif">
-                    보안접속
-                </p>
-
-                <ul>
-                    <li><a href="#">Find ID?</a></li>
-                    <li><a href="#">Find Password?</a></li>
-                </ul>
-
-                <p class="login_btn"><a href="#" onclick="check()" type="button">Login</a></p>
-            </div>
-
-            <div class="join">
-                <h3>New Customer</h3>
-                <p class="join_text">
-                아직 회원이 아니십니까? <br>
-                회원을 위한 다양한 혜택이 <br>
-                준비되어 있습니다.
-                </p>
-                <p class="login_btn"><a href="signUp.html">Join Us</a></p>
-            </div>
-
-            <div class="link">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="https://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif" alt="네이버 로그인">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="https://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif" alt="카카오계정 로그인">
-                        </a>
-                    </li>
-                </ul>
+    <!-- 상세페이지 시작 -->
+    <div class="container">
+        <div class="empty_space"></div>
+        <div class="wrap">
+            <div class="item_wrap">
+                <div class="table_title">
+                    <h2>장바구니</h2>
+                </div>
+                <div class="infomation">
+                    <div class="infomation_title">
+                        <h2>혜택정보</h2>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>VIP 회원님 반갑습니다!!! 🎈</li>
+                            <li>전체 사이트 개발은 에이콘 아카데미 자바 풀스택반 수료 이후 가능합니다</li>
+                            <li>개발 전 저희 사이트를 방문해 주셔서 감사합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cart_table_wrap">
+                    <form id="frm">
+                      <table class="cart_table">
+                        <thead>
+                          <tr>
+                            <th>삭제</th>
+                            <th>사진</th>
+                            <th>상품명</th>
+                            <th>수량</th>
+                            <th>상품금액</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                      <div class="no_cart_item"></div>
+                    </form>
+                    <div class="cart_details_wrap">
+                        <div class="cart_drop_wrap">
+                          <div>선택한 상품</div>
+                          <button id="dropItem">삭제하기</button>
+                        </div>
+                        <div class="cart_price_wrap">
+                          <div class="cart_price"></div>
+                          <button id="order">주문하기</button>
+                        </div>
+                      </div>
+                  </div>
             </div>
         </div>
-    </form>
     </div>
+
+
+
+
 
 
 
@@ -226,29 +218,7 @@
 
     <!-- 자바스크립트 -->
     <script src="app.js"></script>
-    <script src="login.js"></script>
-
-    <!-- <script>
-        // 로그인 버튼
-        function check(){
-
-        let frm = document.frm;
-        let member_id = frm.member_id;
-        let member_passwd = frm.member_passwd;
-
-        if(member_id.value == ""){
-            alert("아이디를 입력하세요");
-            member_id.focus();
-            return;
-        }else if(member_passwd.value == ""){
-            alert("비밀번호를 입력하세요");
-            member_passwd.focus();
-            return;
-        }else{
-            alert("로그인 되었습니다!");
-        }
-        }
-    </script> -->
+    <script type="module" src="cart.js"></script>
 </body>
 
 </html>
