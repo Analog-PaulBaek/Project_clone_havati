@@ -121,6 +121,7 @@
 
     <!-- 아이템 슬라이드 부분 시작 -->
     <div class="item-list">
+        <form name="frm" method="post">
         <div class="titleArea">
             <h2>로그인</h2>
         </div>
@@ -131,11 +132,11 @@
 
                 <p class="check">
                     <span>User ID</span>
-                    <input type="text" id="member_id">
+                    <input type="text" name="member_id">
                 </p>
                 <p class="check">
                     <span>Password</span>
-                    <input type="password" id="member_passwd">
+                    <input type="password" name="member_passwd">
                 </p>
 
                 <p class="security">
@@ -150,7 +151,7 @@
                     <li><a href="#">Find Password?</a></li>
                 </ul>
 
-                <p class="login_btn"><a href="#">Login</a></p>
+                <p class="login_btn"><a href="#" onclick="check()" type="button">Login</a></p>
             </div>
 
             <div class="join">
@@ -178,6 +179,7 @@
                 </ul>
             </div>
         </div>
+    </form>
     </div>
 
 
@@ -224,6 +226,29 @@
 
     <!-- 자바스크립트 -->
     <script src="app.js"></script>
+    <script src="login.js"></script>
+
+    <!-- <script>
+        // 로그인 버튼
+        function check(){
+
+        let frm = document.frm;
+        let member_id = frm.member_id;
+        let member_passwd = frm.member_passwd;
+
+        if(member_id.value == ""){
+            alert("아이디를 입력하세요");
+            member_id.focus();
+            return;
+        }else if(member_passwd.value == ""){
+            alert("비밀번호를 입력하세요");
+            member_passwd.focus();
+            return;
+        }else{
+            alert("로그인 되었습니다!");
+        }
+        }
+    </script> -->
 </body>
 
 </html>
