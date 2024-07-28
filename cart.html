@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>하바티 메인</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
     <!--폰트어썸 CDN : -->
     <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
 
@@ -18,7 +18,7 @@
 
 <body>
     <!-- 상단 스크롤 버튼 -->
-     <div><a href="#" class="btn_top"><i class="fa-solid fa-angles-up"></i></a></div>
+    <div><a href="#" class="btn_top"><i class="fa-solid fa-angles-up"></i></a></div>
     <!-- 사이드 메뉴 부분 시작 -->
     <div id="sidemenu_show"></div>
     <div class="side-menu-wrap" id="side_menu">
@@ -40,7 +40,7 @@
             <ul><a href="#">ACCOUNT</a>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="joinus.html">Join us</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="cart.html">Cart</a></li>
                 <li><a href="#">Myshop</a></li>
                 <li><a href="#">Wishlist</a></li>
             </ul>
@@ -98,7 +98,7 @@
                     <ul class="main-menu-child" id="account-menu">
                         <li><a href="login.html">LOGIN</a></li>
                         <li><a href="joinus.html">JOIN US</a></li>
-                        <li><a href="#">CART</a></li>
+                        <li><a href="cart.html">CART</a></li>
                         <li><a href="#">MYSHOP</a></li>
                         <li><a href="#">WISH LIST</a></li>
                         <li><a href="#">ORDER LIST</a></li>
@@ -119,8 +119,56 @@
 
 
 
-    <!-- 아이템 슬라이드 부분 시작 -->
-    <div class="item-list"></div>
+    <!-- 상세페이지 시작 -->
+    <div class="container">
+        <div class="empty_space"></div>
+        <div class="wrap">
+            <div class="item_wrap">
+                <div class="table_title">
+                    <h2>장바구니</h2>
+                </div>
+                <div class="infomation">
+                    <div class="infomation_title">
+                        <h2>혜택정보</h2>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>VIP 회원님 반갑습니다!!! 🎈</li>
+                            <li>전체 사이트 개발은 에이콘 아카데미 자바 풀스택반 수료 이후 가능합니다</li>
+                            <li>개발 전 저희 사이트를 방문해 주셔서 감사합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cart_table_wrap">
+                    <form id="frm">
+                      <table class="cart_table">
+                        <thead>
+                          <tr>
+                            <th>삭제</th>
+                            <th>사진</th>
+                            <th>상품명</th>
+                            <th>수량</th>
+                            <th>상품금액</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                      <div class="no_cart_item"></div>
+                    </form>
+                    <div class="cart_details_wrap">
+                        <div class="cart_drop_wrap">
+                          <div>선택한 상품</div>
+                          <button id="dropItem">삭제하기</button>
+                        </div>
+                        <div class="cart_price_wrap">
+                          <div class="cart_price"></div>
+                          <button id="order">주문하기</button>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -170,6 +218,7 @@
 
     <!-- 자바스크립트 -->
     <script src="app.js"></script>
+    <script type="module" src="cart.js"></script>
 </body>
 
 </html>

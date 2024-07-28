@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>하바티 메인</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <!--폰트어썸 CDN : -->
     <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
 
@@ -39,8 +39,8 @@
             </ul>
             <ul><a href="#">ACCOUNT</a>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="joinus.html">Join us</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="signUp.html">Join us</a></li>
+                <li><a href="cart.html">Cart</a></li>
                 <li><a href="#">Myshop</a></li>
                 <li><a href="#">Wishlist</a></li>
             </ul>
@@ -97,8 +97,8 @@
                 <li class="main-menu-parent"><a href="#">ACCOUNT</a>
                     <ul class="main-menu-child" id="account-menu">
                         <li><a href="login.html">LOGIN</a></li>
-                        <li><a href="joinus.html">JOIN US</a></li>
-                        <li><a href="#">CART</a></li>
+                        <li><a href="signUp.html">JOIN US</a></li>
+                        <li><a href="cart.html">CART</a></li>
                         <li><a href="#">MYSHOP</a></li>
                         <li><a href="#">WISH LIST</a></li>
                         <li><a href="#">ORDER LIST</a></li>
@@ -120,11 +120,67 @@
 
 
     <!-- 아이템 슬라이드 부분 시작 -->
-    <div class="item-list"></div>
+    <div class="item-list">
+        <form name="frm" method="post">
+        <div class="titleArea">
+            <h2>로그인</h2>
+        </div>
 
+        <div class="login_wrap">
+            <div class="login">
+                <h3>Member Login</h3>
 
+                <p class="check">
+                    <span>User ID</span>
+                    <input type="text" name="member_id">
+                </p>
+                <p class="check">
+                    <span>Password</span>
+                    <input type="password" name="member_passwd">
+                </p>
 
+                <p class="security">
+                    <input type="checkbox" id="member_check_save_id">
+                    <label>아이디 저장</label>
+                    <img src="https://img.echosting.cafe24.com/design/skin/default/member/ico_access.gif">
+                    보안접속
+                </p>
 
+                <ul>
+                    <li><a href="#">Find ID?</a></li>
+                    <li><a href="#">Find Password?</a></li>
+                </ul>
+
+                <p class="login_btn"><a href="#" onclick="check()" type="button">Login</a></p>
+            </div>
+
+            <div class="join">
+                <h3>New Customer</h3>
+                <p class="join_text">
+                아직 회원이 아니십니까? <br>
+                회원을 위한 다양한 혜택이 <br>
+                준비되어 있습니다.
+                </p>
+                <p class="login_btn"><a href="signUp.html">Join Us</a></p>
+            </div>
+
+            <div class="link">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="https://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif" alt="네이버 로그인">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif" alt="카카오계정 로그인">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+    </div>
 
 
 
@@ -170,6 +226,29 @@
 
     <!-- 자바스크립트 -->
     <script src="app.js"></script>
+    <script src="login.js"></script>
+
+    <!-- <script>
+        // 로그인 버튼
+        function check(){
+
+        let frm = document.frm;
+        let member_id = frm.member_id;
+        let member_passwd = frm.member_passwd;
+
+        if(member_id.value == ""){
+            alert("아이디를 입력하세요");
+            member_id.focus();
+            return;
+        }else if(member_passwd.value == ""){
+            alert("비밀번호를 입력하세요");
+            member_passwd.focus();
+            return;
+        }else{
+            alert("로그인 되었습니다!");
+        }
+        }
+    </script> -->
 </body>
 
 </html>
