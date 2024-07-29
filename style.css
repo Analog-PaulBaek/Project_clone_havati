@@ -1,4 +1,5 @@
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -154,7 +155,6 @@ body * {
   border: none;
   background-color: transparent;
 }
-
 .sub-menu button:hover {
   cursor: pointer;
 }
@@ -179,6 +179,8 @@ body * {
 
 /* 메인 메뉴 바시작 */
 .main-menu {
+  /* test */
+  /* border: 3px solid black; */
   height: 39.4px;
   display: flex;
   align-items: center;
@@ -552,7 +554,6 @@ body * {
   padding: 10px 0px;
   text-align: center;
 }
-
 .copyright {
   margin: 10px 0px 30px;
 }
@@ -566,6 +567,9 @@ body * {
   left: 20px;
   z-index: 999;
   cursor: pointer;
+}
+.popup-wrap.hidden {
+  display: none;
 }
 
 swiper-container {
