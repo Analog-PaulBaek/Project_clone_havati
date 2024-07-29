@@ -1,9 +1,7 @@
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
-
 body * {
   font-family: 'Roboto', 'Nanum Gothic', sans-serif;
   font-weight: 400;
@@ -155,6 +153,7 @@ body * {
   border: none;
   background-color: transparent;
 }
+
 .sub-menu button:hover {
   cursor: pointer;
 }
@@ -179,8 +178,6 @@ body * {
 
 /* 메인 메뉴 바시작 */
 .main-menu {
-  /* test */
-  border: 3px solid black;
   height: 39.4px;
   display: flex;
   align-items: center;
@@ -336,118 +333,157 @@ body * {
 
   flex-direction: column;
 }
-
 .empty_space {
   width: 100%;
   height: 250px;
 }
 
 .wrap {
+  width: 1200px;
+  height: 900px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
 }
-
 .item_wrap {
   width: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  /* border: 1px solid black; */
 }
-.item {
-  margin: 5px;
-  width: 250px;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.item_info {
-  background-color: white;
-  width: 200px;
-  height: 200px;
-  z-index: 1;
-  position: relative;
-  visibility: hidden;
-}
-.item_info a {
-  text-decoration: none;
-  color: black;
-  display: block;
-  position: absolute;
-  z-index: 3;
-  width: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.item_info p {
+.table_title {
+  padding: 20px;
   text-align: center;
-  font-weight: 900;
-  margin: 0;
-}
-.item:hover .item_info {
-  visibility: visible;
-  background-color: ghostwhite;
-  opacity: 0.8;
 }
 
-/* 아이템에 넣을 이미지 */
-.item_wrap .item:nth-child(1) {
-  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.table_title h2 {
+  font-size: 16px;
 }
-.item_wrap .item:nth-child(2) {
-  background-image: url('https://via.placeholder.com/250X250');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.infomation {
+  border: 1px rgb(213, 213, 213) solid;
+  margin: 0 auto;
+  display: flex;
+  width: 900px;
 }
-.item_wrap .item:nth-child(3) {
-  background-image: url('https://via.placeholder.com/250X250');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.infomation_title {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.item_wrap .item:nth-child(4) {
-  background-image: url('https://via.placeholder.com/250X250');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.infomation_title h2 {
+  font-size: 16px;
 }
-.item_wrap .item:nth-child(5) {
-  background-image: url('https://via.placeholder.com/250X250');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.description {
+  width: 85%;
+  border-left: 1px rgb(213, 213, 213) solid;
 }
-.item_wrap .item:nth-child(6) {
-  background-image: url('https://via.placeholder.com/250X250');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.description ul {
+  list-style: none;
 }
-.item_wrap .item:nth-child(7) {
-  background-image: url('https://via.placeholder.com/250X250');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.description ul li {
+  margin-top: 10px;
+  font-size: 15px;
 }
-.item_wrap .item:nth-child(8) {
-  background-image: url('https://via.placeholder.com/250X250');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.description :nth-child(3) {
+  border-top: 1px rgb(213, 213, 213) solid;
+  padding-top: 10px;
 }
-.item_wrap .item:nth-child(9) {
-  background-image: url('https://via.placeholder.com/250X250');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+
+table {
+  margin: 0 auto;
+  width: 900px;
+  margin-top: 50px;
+  border-collapse: collapse;
+}
+
+table th,
+td {
+  border-top: 1px rgb(213, 213, 213) solid;
+  border-bottom: 1px rgb(213, 213, 213) solid;
+  text-align: center;
+  font-size: 15px;
+}
+
+table th {
+  padding: 10px 0;
+}
+
+.cart_table_wrap {
+  margin-top: 20px;
+  padding-bottom: 40px;
+  border: 1px rgb(213, 213, 213) solid;
+}
+.no_cart_item {
+  margin: 0 auto;
+  width: 900px;
+  height: 100px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+/* 테이블 하단 */
+.cart_details_wrap {
+  margin: 0 auto;
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+.cart_drop_wrap {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 250px;
+  height: 30px;
+}
+.cart_drop_wrap > div {
+  margin-right: 10px;
+  font-size: 14px;
+}
+.cart_drop_wrap button {
+  background-color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  height: 30px;
+  width: 40%;
+}
+.cart_price_wrap {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  height: 30px;
+}
+.cart_drop_wrap button:hover {
+  background-color: #222;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cart_price_wrap button:hover {
+  background-color: #222;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cart_price_wrap button {
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-size: 13px;
+  width: 25%;
+}
+
+.cart_price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+}
+
+#total_price {
+  font-weight: 900;
+  font-size: 20px;
 }
 
 /* 하단 부분 시작 */
@@ -554,58 +590,7 @@ body * {
   padding: 10px 0px;
   text-align: center;
 }
+
 .copyright {
   margin: 10px 0px 30px;
-}
-
-/* 팝업창 시작 */
-.popup-wrap {
-  border: 1px rgb(213, 213, 213) solid;
-  background-color: white;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 999;
-  cursor: pointer;
-}
-
-swiper-container {
-  width: 500px;
-  height: 500px;
-}
-
-swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.popup-btns {
-  display: flex;
-}
-.popup-btns button {
-  border: none;
-  background-color: white;
-  width: 250px;
-  height: 60px;
-  cursor: pointer;
-}
-.popup-btns button:hover {
-  background-color: rgb(219, 219, 219);
-}
-#notTodayBtn {
-  border-right: 1px rgb(213, 213, 213) solid;
-  border-top: 1px rgb(213, 213, 213) solid;
-}
-#closeBtn {
-  border-top: 1px rgb(213, 213, 213) solid;
 }

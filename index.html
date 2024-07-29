@@ -13,11 +13,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- 스와이퍼 슬라이더 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 </head>
 
 <body>
+    <!-- 팝업창 -->
+    <div class="popup-wrap">
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="0"
+            centered-slides="true" autoplay-delay="3000" autoplay-disable-on-interaction="false">
+            <swiper-slide><img src="https://via.placeholder.com/500X500" alt=""></swiper-slide>
+            <swiper-slide><img src="https://via.placeholder.com/500X500" alt=""></swiper-slide>
+        </swiper-container>
+        <div class="popup-btns">
+            <button id="notTodayBtn">오늘 하루 열지 않기</button>
+            <button id="closeBtn">닫기</button>
+        </div>
+    </div>
+
     <!-- 팝업창 -->
     <div class="popup-wrap">
         <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="0"
@@ -53,8 +68,8 @@
             </ul>
             <ul><a href="#">ACCOUNT</a>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="joinus.html">Join us</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="signUp.html">Join us</a></li>
+                <li><a href="cart.html">Cart</a></li>
                 <li><a href="#">Myshop</a></li>
                 <li><a href="#">Wishlist</a></li>
             </ul>
@@ -111,8 +126,8 @@
                 <li class="main-menu-parent"><a href="#">ACCOUNT</a>
                     <ul class="main-menu-child" id="account-menu">
                         <li><a href="login.html">LOGIN</a></li>
-                        <li><a href="joinus.html">JOIN US</a></li>
-                        <li><a href="#">CART</a></li>
+                        <li><a href="signUp.html">JOIN US</a></li>
+                        <li><a href="cart.html">CART</a></li>
                         <li><a href="#">MYSHOP</a></li>
                         <li><a href="#">WISH LIST</a></li>
                         <li><a href="#">ORDER LIST</a></li>
@@ -134,7 +149,32 @@
 
 
     <!-- 아이템 슬라이드 부분 시작 -->
-    <div class="item-list"></div>
+    <div class="container">
+        <div class="empty_space"></div>
+        <div class="wrap">
+            <div class="item_wrap">
+            <div class="item">
+                <div class="item_info">
+                    <a href="#">
+                        <p>[HORLISUN] POWELL SHORT SLEEVE STRIPE T-SHIRT (BLACK)</p>
+                        <p>65000원</p>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+
+            </div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            </div>
+        </div>
+    </div>
+
 
 
 
