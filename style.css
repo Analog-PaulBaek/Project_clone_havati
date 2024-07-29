@@ -567,6 +567,9 @@ body * {
   z-index: 999;
   cursor: pointer;
 }
+.popup-wrap.hidden {
+  display: none;
+}
 
 swiper-container {
   width: 500px;

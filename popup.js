@@ -1,27 +1,45 @@
-const closeBtn = document.querySelector('#closeBtn');
-const todayBtn = document.querySelector('#notTodayBtn');
+document.addEventListener('DOMContentLoaded', isExpired);
+
+const closeBtn = document.querySelector('.closeBtn');
+const notTodayBtn = document.querySelector('.notTodayBtn');
 const popup = document.querySelector('.popup-wrap');
 
-closeBtn.addEventListener('click', popupClose);
-notTodayBtn.addEventListener('click', popupNotToday);
+// popup.classList.add('show');
 
-function popupClose() {
-  popup.style.display = 'none';
-}
+// 팝업창 닫기
+closeBtn.addEventListener('click', () => {
+  popup.classList.add('hidden');
+});
 
-function popupNotToday() {
-  let key = localStorage.getItem('key');
-  console.log(key);
-  getExpiryKey(key);
-}
+// 오늘 하루 열지 않기
+notTodayBtn.addEventListener('click', () => {
+  setExpiryKey();
+  popup.classList.add('hidden');
+});
 
-function getExpiryKey(key) {
-  const expiry = localStorage.getItem(key);
-  // null이면 false
-  if (!expiry) {
-    console.log('dddd');
-    return key;
+function isExpired() {
+  const expiryKey = getExpiryKey();
+  const now = new Date().getTime();
+
+  // expiryKey가 null인 경우 팝업 표시, 현재시간과 만료시간을 비교
+  if (!expiryKey || parseInt(expiryKey) < now) {
+    // 팝업 표시
+    popup.classList.remove('hidden');
+  } else {
+    // 팝업 감추기
+    popup.classList.add('hidden');
   }
 }
 
-function setExpiryKey() {}
+function getExpiryKey() {
+  return localStorage.getItem('expiryKey');
+}
+
+function setExpiryKey() {
+  let today = new Date();
+  let now = today.getTime();
+  // let expiryTime = 24 * 60 * 60 * 1000; // 24시간
+  let expiryTime = 60 * 1000;
+  let expiryKey = now + expiryTime;
+  localStorage.setItem('expiryKey', expiryKey);
+}
