@@ -82,15 +82,24 @@ function change(e) {
   bigImg.src = clickImg.src;
 }
 
-function addList() {
-  let frm = document.frm;
-  let parent = document.getElementById('parent');
-  let price = document.getElementById("itemprice");
-  let size = frm.selectbox.options[selectbox.selectedIndex].text; // 선택한 사이즈
-  // console.log(size);
-  let itemName = document.getElementById('itemname').innerHTML; // 상품 이름.
-  // console.log(itemName);
+let frm = document.frm;
+let parent = document.getElementById('parent');
+let price = document.getElementById("itemprice");
+let itemName = document.getElementById('itemname').innerHTML; // 상품 이름.
 
+
+
+
+function addList() {
+
+  let selectOption = frm.selectbox.options[selectbox.selectedIndex];
+
+  if (frm.selectbox.selectedIndex === 0) {
+    return;
+  }
+
+  let size = selectOption.text;
+  console.log(selectOption);
 
   let tr = document.createElement("tr"); // 부모
 
@@ -132,7 +141,8 @@ function addList() {
 
 
   let td3 = document.createElement('td');
-  td3.id = "td3"
+  td3.id = "td3";
+  td3.class = "cartprice";
   td3.innerHTML = price.innerHTML + "원";
 
   tr.append(td1, td2, td3);
@@ -145,28 +155,40 @@ function addList() {
     input.value = parseInt(input.value) + 1
     td3.innerHTML = parseInt(td3.innerHTML);
     td3.innerHTML = price.innerHTML * input.value + "원";
-    sum.innerHTML = input.value * price.innerHTML;
-
+    totalPrice();
   });
 
   amountDown.addEventListener("click", () => {
     input.value = parseInt(input.value) - 1;
     td3.innerHTML = parseInt(td3.innerHTML);
     td3.innerHTML = price.innerHTML * input.value + "원";
-    sum.innerHTML = input.value * price.innerHTML;
+    totalPrice();
   });
 
-  let sum = document.getElementById("sum");
-  sum.innerHTML = input.value * price.innerHTML;
 
   let remove = () => {
     tr.remove();
+    totalPrice();
   }
-  deleteBtn.addEventListener("click",remove);
+  deleteBtn.addEventListener("click", remove);
+
+  function totalPrice() {
+    let sum = document.getElementById('sum');
+    total = 0;
+    let priceInts = document.querySelectorAll("#td3");
+    priceInts.forEach(priceInt => {
+    total += parseInt(priceInt.textContent);
+    });
+    console.log(total);
+    sum.textContent = total;
+  }
+
+  totalPrice();
+
 }
 
 
-  
+
 
 
 
