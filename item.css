@@ -330,7 +330,6 @@ body * {
   position: relative;
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
 
   flex-direction: column;
 }
@@ -358,8 +357,8 @@ body * {
 
 .table-title h2 {
   font-size: 15px;
-}S
-.infomation {
+}
+S .infomation {
   border: thin solid gray;
   margin: 0 auto;
   width: 900px;
@@ -427,147 +426,6 @@ td {
   height: 30px;
   border: 1px solid black;
 }
-=======
-
-  flex-direction: column;
-
-}
-
-.empty_space {
-  width: 100%;
-  height: 250px;
-}
-
-.wrap {
-  display: flex;
-  margin: 0 auto;
-  /* border: 1px solid black; */
-}
-
-.item_wrap {
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  /* border: 1px solid black; */
-  margin-right: 180px;
-}
-
-.big_img>img {
-  width: 480px;
-  height: 600px;
-
-}
-
-.another_img ul {
-  display: flex;
-  padding: 0;
-}
-
-.another_img li {
-  list-style: none;
-  margin: 0 auto;
-}
-
-.another_img li img {
-  width: 62px;
-  height: 77px;
-}
-
-.another_img li:hover {
-  cursor: pointer;
-}
-
-
-.info {
-  width: 500px;
-  /* border: 1px solid black; */
-}
-
-.info table {
-  width: 100%;
-  /* border: 1px solid black; */
-  padding: 0 15px 0 15px;
-  font-size: 12px;
-}
-
-.info table td {
-  height: 50px;
-  width: 33%;
-  /* border: 1px solid black; */
-}
-
-.info table td input {
-  width: 20px;
-  border: none;
-}
-
-#amount {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#amount-btn {
-  margin: auto 0;
-}
-
-#delete-btn {
-  width: 15px;
-  height: 15px;
-}
-
-#td3{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-
-  
-}
-.info table select {
-  border: 1px rgb(213, 213, 213) solid;
-  color: rgb(53, 53, 53);
-  font-size: 12px;
-  opacity: 0.8;
-}
-
-.info table tr:nth-child(1) {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-
-#btns button {
-  border: 1px solid black;
-  background-color: white;
-  width: 98%;
-  height: 25px;
-  transition: all 0.2s ease-in-out;
-}
-
-#btns button:hover {
-  cursor: pointer;
-  color: white;
-  background-color: black;
-}
-
-#btns {
-  height: 28px;
-}
-
-
-
-
-
-
-
-
-
-
->>>>>>> upstream/main
 
 /* 하단 부분 시작 */
 

@@ -180,7 +180,7 @@ body * {
 /* 메인 메뉴 바시작 */
 .main-menu {
   /* test */
-  border: 3px solid black;
+  /* border: 3px solid black; */
   height: 39.4px;
   display: flex;
   align-items: center;
