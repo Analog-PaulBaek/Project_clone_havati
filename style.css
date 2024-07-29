@@ -394,55 +394,55 @@ body * {
 
 /* 아이템에 넣을 이미지 */
 .item_wrap .item:nth-child(1) {
-  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
+  background-image: url('https://havatishop.com/web/product/big/202403/98c89043e0b0e09f03d59c576dfa4543.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .item_wrap .item:nth-child(2) {
-  background-image: url('https://via.placeholder.com/250X250');
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .item_wrap .item:nth-child(3) {
-  background-image: url('https://via.placeholder.com/250X250');
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .item_wrap .item:nth-child(4) {
-  background-image: url('https://via.placeholder.com/250X250');
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .item_wrap .item:nth-child(5) {
-  background-image: url('https://via.placeholder.com/250X250');
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .item_wrap .item:nth-child(6) {
-  background-image: url('https://via.placeholder.com/250X250');
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .item_wrap .item:nth-child(7) {
-  background-image: url('https://via.placeholder.com/250X250');
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .item_wrap .item:nth-child(8) {
-  background-image: url('https://via.placeholder.com/250X250');
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .item_wrap .item:nth-child(9) {
-  background-image: url('https://via.placeholder.com/250X250');
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/25/09/04/t-shirt-1278404_1280.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -566,9 +566,10 @@ body * {
   left: 20px;
   z-index: 999;
   cursor: pointer;
-}
-.popup-wrap.hidden {
   display: none;
+}
+.popup-wrap.show {
+  display: block;
 }
 
 swiper-container {
