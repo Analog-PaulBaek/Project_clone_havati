@@ -426,6 +426,15 @@ table th {
   justify-content: center;
   align-items: center;
 }
+/* 상품추가 버튼 */
+
+.pullItem {
+  margin: 0px 5px;
+}
+.pushItem {
+  margin: 0px 5px;
+}
+
 /* 테이블 하단 */
 .cart_details_wrap {
   margin: 0 auto;
