@@ -59,7 +59,7 @@ function showItem() {
                     <td><input id="selectDel" type="checkbox" name="del"></td>
                     <td><img src="${itemsList[i].imgUrl}"></td>
                     <td>${itemsList[i].name} - ${itemsList[i].size}</td>
-                    <td><button class="pullItem" data-index="${i}">-</button>${itemsList[i].count}<button class="pushItem" data-index="${i}">+</button></td>
+                    <td><button class="pullItem" data-index="${i}">-</button><span class="itemCount">${itemsList[i].count}</span><button class="pushItem" data-index="${i}">+</button></td>
                     <td>${itemsList[i].price}</td>
                 </tr>
             `;
@@ -95,7 +95,7 @@ function totalPrice() {
   const rows = tbody.querySelectorAll('tr');
   rows.forEach((row) => {
     const cols = row.querySelectorAll('td');
-    const count = parseInt(cols[3].textContent);
+    const count = parseInt(cols[3].querySelector('.itemCount').textContent);
     const price = parseInt(cols[4].textContent);
     const total = count * price;
     sum += total;
