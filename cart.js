@@ -59,6 +59,7 @@ function showItem() {
     console.log('아이템이 없습니다.');
     return;
   }
+  console.log(typeof itemsList[1].price);
   for (let i = 0; i < itemsList.length; i++) {
     tbody.innerHTML += `
                 <tr>

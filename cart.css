@@ -408,6 +408,11 @@ table th {
   padding: 10px 0;
 }
 
+.cart_table img {
+  width: 100px;
+  height: 120px;
+}
+
 .cart_table_wrap {
   margin-top: 20px;
   padding-bottom: 40px;
