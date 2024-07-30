@@ -423,10 +423,7 @@ table tr td input {
   height: 20px;
   margin-left: 15px;
 }
-table tr:nth-child(5) #address {
-  position: absolute;
-  top: 320px;
-}
+
 input {
   border: 1px solid lightgray;
 }
